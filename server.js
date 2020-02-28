@@ -35,7 +35,7 @@ var server = http.createServer(function (request, response) {
     response.end();
   }
   else if (request.url === '/mantra/home') {
-    fs.readFile("./app/index.html", function (error, fileResp) {
+    fs.readFile("./app/mantra.html", function (error, fileResp) {
       if (!error) {
         response.writeHead(200, { 'Content-Type': 'text/html' });
         response.write(fileResp);
